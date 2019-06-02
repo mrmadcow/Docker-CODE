@@ -12,7 +12,23 @@ apt-get -y install locales-all
 # Install MS TTF fonts
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 # MS TTF
-apt-get install --yes --no-install-recommends ttf-mscorefonts-installer curl
+apt-get install --yes --no-install-recommends \
+	ttf-mscorefonts-installer \
+	fonts-ancient-scripts \
+	fonts-dkg-handwriting \
+	fonts-georgewilliams \
+	fonts-isabella \
+	fonts-yanone-kaffeesatz \
+	ttf-adf-baskervald \
+	ttf-adf-gillius \
+	ttf-adf-mekanus \
+	ttf-adf-oldania \
+	ttf-adf-romande \
+	ttf-adf-switzera \
+	ttf-adf-universalis \
+	ttf-adf-verana \
+	fonts-aenigma \
+	curl
 # Cleartype fonts
 mkdir ~/.fonts
 mkdir /usr/share/fonts/msttvistafonts

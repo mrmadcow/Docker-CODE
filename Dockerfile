@@ -7,6 +7,8 @@ ENV LC_CTYPE en_US.UTF-8
 # Setup scripts for LibreOffice Online
 ADD /scripts/install-libreoffice.sh /
 ADD /scripts/start-libreoffice.sh /
+RUN mkdir -p /usr/share/fonts/truetype
+ADD /fonts/* /usr/share/fonts/truetype/
 RUN bash install-libreoffice.sh
 
 EXPOSE 9980
